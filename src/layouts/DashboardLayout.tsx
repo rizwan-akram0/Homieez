@@ -47,7 +47,7 @@ export function DashboardLayout({
     { name: "Dashboard", path: "/landlord-dashboard", icon: <Home className="w-5 h-5" /> },
     { name: "My Profile", path: "/landlord-dashboard/profile", icon: <User className="w-5 h-5" /> },
     { name: "My Properties", path: "/landlord-dashboard/properties", icon: <Building className="w-5 h-5" /> },
-    { name: "Booking Requests", path: "/landlord-dashboard/requests", icon: <Calendar className="w-5 h-5" /> },
+    { name: "Bookings", path: "/landlord-dashboard/bookings", icon: <Calendar className="w-5 h-5" /> },
     { name: "Tenants", path: "/landlord-dashboard/tenants", icon: <Users className="w-5 h-5" /> },
     { name: "Payments", path: "/landlord-dashboard/payments", icon: <CreditCard className="w-5 h-5" /> },
     { name: "Messages", path: "/landlord-dashboard/messages", icon: <MessageSquare className="w-5 h-5" /> },

@@ -21,8 +21,11 @@ import {
 } from 'lucide-react';
 import { properties, bookings, users } from '../data/mock';
 import { formatCurrency } from '../lib/utils';
+import { useNavigate } from 'react-router-dom';
 
 export function LandlordDashboardPage() {
+  const navigate = useNavigate();
+
   // Get landlord's properties (first 2 for demo)
   const myProperties = properties.slice(0, 2);
   
@@ -203,21 +206,21 @@ export function LandlordDashboardPage() {
 
       {/* Quick Actions */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <Button variant="outline" className="h-auto py-6 flex flex-col items-center gap-2">
+        <Button variant="outline" className="h-auto py-6 flex flex-col items-center gap-2" onClick={() => navigate('/landlord-dashboard/properties')}>
           <Building className="h-6 w-6" />
           <span>Manage Properties</span>
         </Button>
-        <Button variant="outline" className="h-auto py-6 flex flex-col items-center gap-2">
+        <Button variant="outline" className="h-auto py-6 flex flex-col items-center gap-2" onClick={() => navigate('/landlord-dashboard/bookings')}>
           <Calendar className="h-6 w-6" />
           <span>View Bookings</span>
         </Button>
-        <Button variant="outline" className="h-auto py-6 flex flex-col items-center gap-2">
+        <Button variant="outline" className="h-auto py-6 flex flex-col items-center gap-2" onClick={() => navigate('/landlord-dashboard/messages')}>
           <MessageSquare className="h-6 w-6" />
           <span>Chat with Tenants</span>
         </Button>
-        <Button variant="outline" className="h-auto py-6 flex flex-col items-center gap-2">
+        <Button variant="outline" className="h-auto py-6 flex flex-col items-center gap-2" onClick={() => navigate('/landlord-dashboard/payments')}>
           <BarChart className="h-6 w-6" />
-          <span>View Analytics</span>
+          <span>View Payments</span>
         </Button>
       </div>
     </DashboardLayout>

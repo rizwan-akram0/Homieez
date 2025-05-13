@@ -9,11 +9,34 @@ import { ListPropertyPage } from "./pages/ListPropertyPage";
 import { VerificationPage } from "./pages/VerificationPage";
 import { AboutPage } from "./pages/AboutPage";
 import { TenantDashboardPage } from "./pages/TenantDashboardPage";
+import { TenantProfilePage } from "./pages/tenant/ProfilePage";
+import { TenantBookingsPage } from "./pages/tenant/BookingsPage";
+import { TenantPaymentsPage } from "./pages/tenant/PaymentsPage";
+import { SavedPropertiesPage } from "./pages/tenant/SavedPropertiesPage";
+import { MessagesPage } from "./pages/tenant/MessagesPage";
+import { LoyaltyPointsPage } from "./pages/tenant/LoyaltyPointsPage";
+import { TenantVerificationPage } from "./pages/tenant/VerificationPage";
 import { LandlordDashboardPage } from "./pages/LandlordDashboardPage";
+import { LandlordPropertiesPage } from "./pages/landlord/PropertiesPage";
+import { LandlordTenantsPage } from "./pages/landlord/TenantsPage";
+import { LandlordBookingsPage } from "./pages/landlord/BookingsPage";
+import { LandlordPaymentsPage } from "./pages/landlord/PaymentsPage";
+import { LandlordProfilePage } from "./pages/landlord/ProfilePage";
+import { LandlordMessagesPage } from "./pages/landlord/MessagesPage";
+import { LandlordAnalyticsPage } from "./pages/landlord/AnalyticsPage";
 import { AdminDashboardPage } from "./pages/AdminDashboardPage";
+import { AdminUsersPage } from "./pages/admin/UsersPage";
+import { AdminAnalyticsPage } from "./pages/admin/AnalyticsPage";
 import Login from "./pages/Login";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { AuthProvider, useAuth } from "./contexts/AuthContext";
+
+// Import modals
+import { PropertyDetailsModal } from "./components/modals/PropertyDetailsModal";
+import { ScheduleViewingModal } from "./components/modals/ScheduleViewingModal";
+import { RedeemPointsModal } from "./components/modals/RedeemPointsModal";
+import { UploadDocumentModal } from "./components/modals/UploadDocumentModal";
+import { SendMessageModal } from "./components/modals/SendMessageModal";
 
 // Authentication check based on stored token
 const isAuthenticated = () => {
@@ -61,17 +84,9 @@ function App() {
               }
             />
             
-            {/* Dashboard routes */}
+            {/* Tenant Dashboard routes */}
             <Route
-              path="/admin-dashboard/*"
-              element={
-                <ProtectedRoute allowedTypes={['admin']}>
-                  <AdminDashboardPage />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/tenant-dashboard/*"
+              path="/tenant-dashboard"
               element={
                 <ProtectedRoute allowedTypes={['tenant']}>
                   <TenantDashboardPage />
@@ -79,10 +94,150 @@ function App() {
               }
             />
             <Route
-              path="/landlord-dashboard/*"
+              path="/tenant-dashboard/profile"
+              element={
+                <ProtectedRoute allowedTypes={['tenant']}>
+                  <TenantProfilePage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/tenant-dashboard/bookings"
+              element={
+                <ProtectedRoute allowedTypes={['tenant']}>
+                  <TenantBookingsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/tenant-dashboard/payments"
+              element={
+                <ProtectedRoute allowedTypes={['tenant']}>
+                  <TenantPaymentsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/tenant-dashboard/saved"
+              element={
+                <ProtectedRoute allowedTypes={['tenant']}>
+                  <SavedPropertiesPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/tenant-dashboard/messages"
+              element={
+                <ProtectedRoute allowedTypes={['tenant']}>
+                  <MessagesPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/tenant-dashboard/loyalty"
+              element={
+                <ProtectedRoute allowedTypes={['tenant']}>
+                  <LoyaltyPointsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/tenant-dashboard/verification"
+              element={
+                <ProtectedRoute allowedTypes={['tenant']}>
+                  <TenantVerificationPage />
+                </ProtectedRoute>
+              }
+            />
+
+            {/* Landlord Dashboard routes */}
+            <Route
+              path="/landlord-dashboard"
               element={
                 <ProtectedRoute allowedTypes={['landlord']}>
                   <LandlordDashboardPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/landlord-dashboard/profile"
+              element={
+                <ProtectedRoute allowedTypes={['landlord']}>
+                  <LandlordProfilePage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/landlord-dashboard/properties"
+              element={
+                <ProtectedRoute allowedTypes={['landlord']}>
+                  <LandlordPropertiesPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/landlord-dashboard/tenants"
+              element={
+                <ProtectedRoute allowedTypes={['landlord']}>
+                  <LandlordTenantsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/landlord-dashboard/bookings"
+              element={
+                <ProtectedRoute allowedTypes={['landlord']}>
+                  <LandlordBookingsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/landlord-dashboard/payments"
+              element={
+                <ProtectedRoute allowedTypes={['landlord']}>
+                  <LandlordPaymentsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/landlord-dashboard/messages"
+              element={
+                <ProtectedRoute allowedTypes={['landlord']}>
+                  <LandlordMessagesPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/landlord-dashboard/analytics"
+              element={
+                <ProtectedRoute allowedTypes={['landlord']}>
+                  <LandlordAnalyticsPage />
+                </ProtectedRoute>
+              }
+            />
+
+            {/* Admin Dashboard routes */}
+            <Route
+              path="/admin-dashboard"
+              element={
+                <ProtectedRoute allowedTypes={['admin']}>
+                  <AdminDashboardPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin-dashboard/users"
+              element={
+                <ProtectedRoute allowedTypes={['admin']}>
+                  <AdminUsersPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin-dashboard/analytics"
+              element={
+                <ProtectedRoute allowedTypes={['admin']}>
+                  <AdminAnalyticsPage />
                 </ProtectedRoute>
               }
             />
@@ -99,16 +254,14 @@ interface ProtectedRouteProps {
 }
 
 function ProtectedRoute({ children, allowedTypes }: ProtectedRouteProps) {
-  const { isAuthenticated, user } = useAuth();
   const location = useLocation();
+  const { isAuthenticated, user } = useAuth();
 
   if (!isAuthenticated) {
-    // Redirect to login page with the attempted location
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
 
   if (allowedTypes && user && !allowedTypes.includes(user.type)) {
-    // Redirect to appropriate dashboard if user type doesn't match
     return <Navigate to={`/${user.type}-dashboard`} replace />;
   }
 
