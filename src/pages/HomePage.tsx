@@ -6,14 +6,15 @@ import { SearchBar } from "../components/SearchBar";
 import { PropertyCard } from "../components/PropertyCard";
 import { TestimonialCard } from "../components/TestimonialCard";
 import { Button } from "../components/ui/button";
-import { featuredProperties } from "../data/mock";
+import { featuredProperties, properties } from "../data/mock";
+import { Card, CardContent } from "../components/ui/card";
 
 export function HomePage() {
   // Testimonials data
   const testimonials = [
     {
-      name: "Fatima Ahmed",
-      avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
+      name: "Hamza Ahmed",
+      avatar: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
       role: "Student at LUMS",
       text: "HomieeZ made it super easy to find a verified apartment near my university. The verification process gave me peace of mind!",
       rating: 5,
@@ -26,7 +27,7 @@ export function HomePage() {
       rating: 4,
     },
     {
-      name: "Sarah Khan",
+      name: "Bilal Hassan",
       avatar: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
       role: "Landlord",
       text: "As a property owner, I love the verification system. It helps me find reliable tenants and the payment processing is seamless.",
@@ -207,6 +208,63 @@ export function HomePage() {
         </div>
       </section>
 
+      {/* Locations Section */}
+      <section className="bg-neutral-100 dark:bg-neutral-800 py-9">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">
+              Popular Locations in Lahore
+            </h2>
+            <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
+              Discover properties in Lahore's most sought-after neighborhoods
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {(() => {
+              // Get unique areas and count properties in each
+              const locationStats = properties.reduce((acc, property) => {
+                const area = property.location.area;
+                if (!acc[area]) {
+                  acc[area] = {
+                    count: 1,
+                    description: getAreaDescription(area)
+                  };
+                } else {
+                  acc[area].count++;
+                }
+                return acc;
+              }, {} as Record<string, { count: number; description: string }>);
+
+              // Convert to array and sort by property count
+              return Object.entries(locationStats)
+                .sort(([, a], [, b]) => b.count - a.count)
+                .map(([area, stats]) => (
+                  <Link
+                    key={area}
+                    to={`/search?location=${encodeURIComponent(area)}`}
+                    className="group"
+                  >
+                    <Card className="h-full transition-transform hover:scale-105">
+                      <CardContent className="p-6">
+                        <h3 className="text-xl font-heading font-semibold mb-2 group-hover:text-primary-600">
+                          {area}
+                        </h3>
+                        <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-3">
+                          {stats.description}
+                        </p>
+                        <p className="text-sm text-primary-600">
+                          {stats.count} properties
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ));
+            })()}
+          </div>
+        </div>
+      </section>
+
       {/* Partners Section */}
       <section className="container mx-auto px-4 py-9">
         <div className="text-center mb-8">
@@ -227,48 +285,22 @@ export function HomePage() {
           ))}
         </div>
       </section>
-
-      {/* Download App Section */}
-      <section className=" bg-neutral-100 dark:bg-neutral-800 py-9">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="max-w-xl">
-              <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">
-                Download the HomieeZ App
-              </h2>
-              <p className="text-neutral-600 dark:text-neutral-400 mb-6">
-                Get real-time notifications, chat with landlords, and manage your bookings on the go.
-                Available for iOS and Android.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link to="#">
-                  <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" 
-                    alt="Download on the App Store" 
-                    className="h-12"
-                  />
-                </Link>
-                <Link to="#">
-                  <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
-                    alt="Get it on Google Play" 
-                    className="h-12"
-                  />
-                </Link>
-              </div>
-            </div>
-            <div className="w-full max-w-xs md:max-w-sm">
-              <img 
-                src="https://images.pexels.com/photos/4126724/pexels-photo-4126724.jpeg" 
-                alt="HomieeZ App" 
-                className="w-full h-auto rounded-lg shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
     </MainLayout>
   );
 }
 
 import { Search } from "lucide-react";
+
+// Helper function to get area descriptions
+function getAreaDescription(area: string): string {
+  const descriptions: Record<string, string> = {
+    "DHA": "Defense Housing Authority - Premium gated community",
+    "Gulberg": "Prime commercial & residential area with excellent amenities",
+    "Model Town": "Prestigious residential area with parks and schools",
+    "PIA Society": "Peaceful residential society near airport",
+    "Thokar Niaz Baig": "Affordable housing near Ring Road",
+    "G1-Market": "Commercial hub with residential apartments",
+    "University Road": "Student-friendly area near educational institutions"
+  };
+  return descriptions[area] || "Vibrant neighborhood in Lahore";
+}

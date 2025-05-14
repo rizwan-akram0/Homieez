@@ -15,13 +15,70 @@ import {
 } from 'lucide-react';
 import { Select } from '../../components/ui/select';
 import { formatCurrency } from '../../lib/utils';
+import {
+    AreaChart,
+    Area,
+    BarChart,
+    Bar,
+    LineChart,
+    Line,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+    ResponsiveContainer,
+    Legend,
+    PieChart,
+    Pie,
+    Cell
+} from 'recharts';
+
+// Sample data for revenue chart
+const revenueData = [
+    { month: 'Jan', revenue: 180000, bookings: 145 },
+    { month: 'Feb', revenue: 220000, bookings: 156 },
+    { month: 'Mar', revenue: 260000, bookings: 178 },
+    { month: 'Apr', revenue: 290000, bookings: 189 },
+    { month: 'May', revenue: 250000, bookings: 167 },
+    { month: 'Jun', revenue: 270000, bookings: 182 },
+    { month: 'Jul', revenue: 310000, bookings: 198 },
+    { month: 'Aug', revenue: 280000, bookings: 187 },
+    { month: 'Sep', revenue: 330000, bookings: 210 },
+    { month: 'Oct', revenue: 350000, bookings: 225 },
+    { month: 'Nov', revenue: 320000, bookings: 205 },
+    { month: 'Dec', revenue: 380000, bookings: 235 },
+];
+
+// Sample data for user growth
+const userGrowthData = [
+    { month: 'Jan', tenants: 450, landlords: 120, total: 570 },
+    { month: 'Feb', tenants: 520, landlords: 135, total: 655 },
+    { month: 'Mar', tenants: 580, landlords: 150, total: 730 },
+    { month: 'Apr', tenants: 650, landlords: 165, total: 815 },
+    { month: 'May', tenants: 720, landlords: 180, total: 900 },
+    { month: 'Jun', tenants: 800, landlords: 195, total: 995 },
+    { month: 'Jul', tenants: 880, landlords: 210, total: 1090 },
+    { month: 'Aug', tenants: 950, landlords: 225, total: 1175 },
+    { month: 'Sep', tenants: 1020, landlords: 240, total: 1260 },
+    { month: 'Oct', tenants: 1100, landlords: 255, total: 1355 },
+    { month: 'Nov', tenants: 1180, landlords: 270, total: 1450 },
+    { month: 'Dec', tenants: 1234, landlords: 285, total: 1519 },
+];
+
+// Sample data for property distribution
+const propertyDistribution = [
+    { name: 'Apartments', value: 350, color: '#0ea5e9' },
+    { name: 'Houses', value: 250, color: '#8b5cf6' },
+    { name: 'Rooms', value: 156, color: '#f59e0b' },
+    { name: 'Hostels', value: 100, color: '#10b981' },
+];
 
 export function AdminAnalyticsPage() {
     return (
         <DashboardLayout
             userType="admin"
-            userName="Sarah Admin"
-            userAvatar="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg"
+            userName="Ahmad Khan"
+            userAvatar="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
         >
             <div className="max-w-7xl mx-auto">
                 <div className="flex items-center justify-between mb-6">
@@ -127,9 +184,47 @@ export function AdminAnalyticsPage() {
                                     <option value="year">This Year</option>
                                 </Select>
                             </div>
-                            <div className="h-80 flex items-center justify-center border rounded-lg">
-                                {/* Replace with actual chart component */}
-                                <p className="text-neutral-500">Revenue Chart Placeholder</p>
+                            <div className="h-80">
+                                <ResponsiveContainer width="100%" height="100%">
+                                    <AreaChart
+                                        data={revenueData}
+                                        margin={{
+                                            top: 10,
+                                            right: 30,
+                                            left: 0,
+                                            bottom: 0,
+                                        }}
+                                    >
+                                        <CartesianGrid strokeDasharray="3 3" />
+                                        <XAxis dataKey="month" />
+                                        <YAxis yAxisId="left" tickFormatter={(value) => `$${value / 1000}k`} />
+                                        <YAxis yAxisId="right" orientation="right" tickFormatter={(value) => value} />
+                                        <Tooltip
+                                            formatter={(value, name) => {
+                                                if (name === 'revenue') return formatCurrency(value as number);
+                                                return value;
+                                            }}
+                                        />
+                                        <Legend />
+                                        <Area
+                                            yAxisId="left"
+                                            type="monotone"
+                                            dataKey="revenue"
+                                            name="Revenue"
+                                            stroke="#0ea5e9"
+                                            fill="#0ea5e9"
+                                            fillOpacity={0.2}
+                                        />
+                                        <Line
+                                            yAxisId="right"
+                                            type="monotone"
+                                            dataKey="bookings"
+                                            name="Bookings"
+                                            stroke="#8b5cf6"
+                                            strokeWidth={2}
+                                        />
+                                    </AreaChart>
+                                </ResponsiveContainer>
                             </div>
                         </CardContent>
                     </Card>
@@ -144,13 +239,61 @@ export function AdminAnalyticsPage() {
                                     <option value="year">This Year</option>
                                 </Select>
                             </div>
-                            <div className="h-80 flex items-center justify-center border rounded-lg">
-                                {/* Replace with actual chart component */}
-                                <p className="text-neutral-500">User Growth Chart Placeholder</p>
+                            <div className="h-80">
+                                <ResponsiveContainer width="100%" height="100%">
+                                    <BarChart
+                                        data={userGrowthData}
+                                        margin={{
+                                            top: 10,
+                                            right: 30,
+                                            left: 0,
+                                            bottom: 0,
+                                        }}
+                                    >
+                                        <CartesianGrid strokeDasharray="3 3" />
+                                        <XAxis dataKey="month" />
+                                        <YAxis />
+                                        <Tooltip />
+                                        <Legend />
+                                        <Bar dataKey="tenants" name="Tenants" fill="#0ea5e9" stackId="a" />
+                                        <Bar dataKey="landlords" name="Landlords" fill="#8b5cf6" stackId="a" />
+                                    </BarChart>
+                                </ResponsiveContainer>
                             </div>
                         </CardContent>
                     </Card>
                 </div>
+
+                {/* Property Distribution */}
+                <Card className="mb-8">
+                    <CardContent className="p-6">
+                        <div className="flex items-center justify-between mb-6">
+                            <h2 className="text-lg font-heading font-semibold">Property Distribution</h2>
+                        </div>
+                        <div className="h-80">
+                            <ResponsiveContainer width="100%" height="100%">
+                                <PieChart>
+                                    <Pie
+                                        data={propertyDistribution}
+                                        cx="50%"
+                                        cy="50%"
+                                        labelLine={false}
+                                        label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                                        outerRadius={120}
+                                        fill="#8884d8"
+                                        dataKey="value"
+                                    >
+                                        {propertyDistribution.map((entry, index) => (
+                                            <Cell key={`cell-${index}`} fill={entry.color} />
+                                        ))}
+                                    </Pie>
+                                    <Tooltip formatter={(value) => value} />
+                                    <Legend />
+                                </PieChart>
+                            </ResponsiveContainer>
+                        </div>
+                    </CardContent>
+                </Card>
 
                 {/* Recent Activity */}
                 <Card>
@@ -171,7 +314,7 @@ export function AdminAnalyticsPage() {
                                             <span className="text-sm text-neutral-500">2 hours ago</span>
                                         </div>
                                         <p className="text-sm text-neutral-600 mt-1">
-                                            John Doe registered as a new tenant
+                                            Usman Ali registered as a new tenant
                                         </p>
                                     </div>
                                 </div>

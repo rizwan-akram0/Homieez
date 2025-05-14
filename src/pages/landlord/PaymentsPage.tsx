@@ -12,7 +12,7 @@ export function LandlordPaymentsPage() {
     return (
         <DashboardLayout
             userType="landlord"
-            userName="John Smith"
+            userName="Imran Malik"
             userAvatar="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
         >
             <div className="max-w-7xl mx-auto">
@@ -122,11 +122,11 @@ export function LandlordPaymentsPage() {
                                         <td className="py-3 px-4">
                                             <div className="flex items-center gap-3">
                                                 <img
-                                                    src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
+                                                    src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg"
                                                     alt="Tenant"
                                                     className="w-8 h-8 rounded-full object-cover"
                                                 />
-                                                <span>Michael Brown</span>
+                                                <span>Usman Ali</span>
                                             </div>
                                         </td>
                                         <td className="py-3 px-4">Sunset Apartments #4B</td>
@@ -145,11 +145,11 @@ export function LandlordPaymentsPage() {
                                         <td className="py-3 px-4">
                                             <div className="flex items-center gap-3">
                                                 <img
-                                                    src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
+                                                    src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg"
                                                     alt="Tenant"
                                                     className="w-8 h-8 rounded-full object-cover"
                                                 />
-                                                <span>Sarah Johnson</span>
+                                                <span>Zain Ahmed</span>
                                             </div>
                                         </td>
                                         <td className="py-3 px-4">Downtown Lofts #7A</td>

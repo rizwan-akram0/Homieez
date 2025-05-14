@@ -24,8 +24,8 @@ export function LandlordTenantsPage() {
     return (
         <DashboardLayout
             userType="landlord"
-            userName="Fatima Khan"
-            userAvatar="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
+            userName="Saad Khan"
+            userAvatar="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg"
         >
             <div className="max-w-7xl mx-auto">
                 <h1 className="text-2xl font-heading font-bold mb-6">Manage Tenants</h1>

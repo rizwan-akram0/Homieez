@@ -14,7 +14,7 @@ export function MessagesPage() {
             id: 1,
             name: 'Ahmed Khan',
             role: 'Landlord',
-            avatar: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg',
+            avatar: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg',
             lastMessage: 'Sure, you can visit the property tomorrow',
             timestamp: '10:30 AM',
             unread: 2,

@@ -11,7 +11,7 @@ export function LandlordBookingsPage() {
     return (
         <DashboardLayout
             userType="landlord"
-            userName="John Smith"
+            userName="Imran Malik"
             userAvatar="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
         >
             <div className="max-w-7xl mx-auto">
@@ -63,12 +63,12 @@ export function LandlordBookingsPage() {
                             <div className="flex items-center justify-between">
                                 <div className="flex items-center gap-4">
                                     <img
-                                        src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
+                                        src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg"
                                         alt="Tenant"
                                         className="w-12 h-12 rounded-full object-cover"
                                     />
                                     <div>
-                                        <h3 className="font-semibold">Michael Brown</h3>
+                                        <h3 className="font-semibold">Usman Ali</h3>
                                         <p className="text-sm text-neutral-500">Viewing Request for Sunset Apartments</p>
                                     </div>
                                 </div>
@@ -114,7 +114,7 @@ export function LandlordBookingsPage() {
                                         className="w-12 h-12 rounded-full object-cover"
                                     />
                                     <div>
-                                        <h3 className="font-semibold">Sarah Johnson</h3>
+                                        <h3 className="font-semibold">Zain Ahmed</h3>
                                         <p className="text-sm text-neutral-500">Viewing Request for Downtown Lofts</p>
                                     </div>
                                 </div>

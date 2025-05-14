@@ -23,7 +23,7 @@ export function LandlordProfilePage() {
     return (
         <DashboardLayout
             userType="landlord"
-            userName="John Smith"
+            userName="Imran Malik"
             userAvatar="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
         >
             <div className="max-w-4xl mx-auto">
@@ -48,7 +48,7 @@ export function LandlordProfilePage() {
                                 </Button>
                             </div>
                             <div>
-                                <h2 className="text-xl font-semibold">John Smith</h2>
+                                <h2 className="text-xl font-semibold">Imran Malik</h2>
                                 <p className="text-sm text-neutral-500">Verified Landlord since 2022</p>
                                 <div className="flex items-center gap-2 mt-2">
                                     <Shield className="h-4 w-4 text-success-600" />
@@ -66,11 +66,11 @@ export function LandlordProfilePage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label className="text-sm font-medium mb-1 block">Full Name</label>
-                                <Input defaultValue="John Smith" />
+                                <Input defaultValue="Imran Malik" />
                             </div>
                             <div>
                                 <label className="text-sm font-medium mb-1 block">Email</label>
-                                <Input defaultValue="john.smith@example.com" type="email" />
+                                <Input defaultValue="imran.malik@example.com" type="email" />
                             </div>
                             <div>
                                 <label className="text-sm font-medium mb-1 block">Phone Number</label>

@@ -26,8 +26,8 @@ export function LandlordPropertiesPage() {
     return (
         <DashboardLayout
             userType="landlord"
-            userName="Fatima Khan"
-            userAvatar="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
+            userName="Imran Malik"
+            userAvatar="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg"
         >
             <div className="max-w-7xl mx-auto">
                 <div className="flex items-center justify-between mb-6">

@@ -59,7 +59,7 @@ export function LandlordAnalyticsPage() {
     return (
         <DashboardLayout
             userType="landlord"
-            userName="John Smith"
+            userName="Imran Malik"
             userAvatar="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
         >
             <div className="max-w-7xl mx-auto">

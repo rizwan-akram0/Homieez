@@ -38,6 +38,14 @@ import { RedeemPointsModal } from "./components/modals/RedeemPointsModal";
 import { UploadDocumentModal } from "./components/modals/UploadDocumentModal";
 import { SendMessageModal } from "./components/modals/SendMessageModal";
 
+// Add these imports
+import { AdminPropertiesPage } from './pages/admin/PropertiesPage';
+import { AdminBookingsPage } from './pages/admin/BookingsPage';
+import { AdminVerificationsPage } from './pages/admin/VerificationsPage';
+import { AdminPaymentsPage } from './pages/admin/PaymentsPage';
+import { AdminSupportTicketsPage } from './pages/admin/SupportTicketsPage';
+import { AdminReportsPage } from './pages/admin/ReportsPage';
+
 // Authentication check based on stored token
 const isAuthenticated = () => {
   const token = localStorage.getItem('authToken');
@@ -238,6 +246,54 @@ function App() {
               element={
                 <ProtectedRoute allowedTypes={['admin']}>
                   <AdminAnalyticsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin-dashboard/properties"
+              element={
+                <ProtectedRoute allowedTypes={['admin']}>
+                  <AdminPropertiesPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin-dashboard/bookings"
+              element={
+                <ProtectedRoute allowedTypes={['admin']}>
+                  <AdminBookingsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin-dashboard/verifications"
+              element={
+                <ProtectedRoute allowedTypes={['admin']}>
+                  <AdminVerificationsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin-dashboard/payments"
+              element={
+                <ProtectedRoute allowedTypes={['admin']}>
+                  <AdminPaymentsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin-dashboard/tickets"
+              element={
+                <ProtectedRoute allowedTypes={['admin']}>
+                  <AdminSupportTicketsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin-dashboard/reports"
+              element={
+                <ProtectedRoute allowedTypes={['admin']}>
+                  <AdminReportsPage />
                 </ProtectedRoute>
               }
             />

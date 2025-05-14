@@ -25,8 +25,8 @@ export function AdminUsersPage() {
     return (
         <DashboardLayout
             userType="admin"
-            userName="Sarah Admin"
-            userAvatar="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg"
+            userName="Ahmad Khan"
+            userAvatar="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
         >
             <div className="max-w-7xl mx-auto">
                 <div className="flex items-center justify-between mb-6">

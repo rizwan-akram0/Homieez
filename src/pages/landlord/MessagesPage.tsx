@@ -20,7 +20,7 @@ export function LandlordMessagesPage() {
     return (
         <DashboardLayout
             userType="landlord"
-            userName="John Smith"
+            userName="Imran Malik"
             userAvatar="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
         >
             <div className="flex h-[calc(100vh-8rem)]">
@@ -36,13 +36,13 @@ export function LandlordMessagesPage() {
                             <div className="p-3 bg-primary-50 dark:bg-primary-900/20 rounded-lg cursor-pointer">
                                 <div className="flex items-center gap-3">
                                     <img
-                                        src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
-                                        alt="Sarah Johnson"
+                                        src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg"
+                                        alt="Usman Ali"
                                         className="w-12 h-12 rounded-full object-cover"
                                     />
                                     <div className="flex-1 min-w-0">
                                         <div className="flex items-center justify-between">
-                                            <h3 className="font-medium truncate">Sarah Johnson</h3>
+                                            <h3 className="font-medium truncate">Usman Ali</h3>
                                             <span className="text-xs text-neutral-500">2m ago</span>
                                         </div>
                                         <p className="text-sm text-neutral-600 dark:text-neutral-400 truncate">
@@ -62,8 +62,8 @@ export function LandlordMessagesPage() {
                                     unread: 2
                                 },
                                 {
-                                    name: "Emma Wilson",
-                                    avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
+                                    name: "Hassan Khan",
+                                    avatar: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
                                     message: "Is the apartment still available?",
                                     time: "3h ago"
                                 },
@@ -80,7 +80,7 @@ export function LandlordMessagesPage() {
                                 >
                                     <div className="flex items-center gap-3">
                                         <img
-                                            src={chat.avatar}
+                                            src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg"
                                             alt={chat.name}
                                             className="w-12 h-12 rounded-full object-cover"
                                         />
@@ -114,12 +114,12 @@ export function LandlordMessagesPage() {
                         <div className="flex items-center justify-between">
                             <div className="flex items-center gap-3">
                                 <img
-                                    src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
-                                    alt="Sarah Johnson"
+                                    src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg"
+                                    alt="Usman Ali"
                                     className="w-10 h-10 rounded-full object-cover"
                                 />
                                 <div>
-                                    <h2 className="font-medium">Sarah Johnson</h2>
+                                    <h2 className="font-medium">Usman Ali</h2>
                                     <p className="text-sm text-neutral-500">Downtown Lofts #7A</p>
                                 </div>
                             </div>
@@ -142,8 +142,8 @@ export function LandlordMessagesPage() {
                         {/* Received Message */}
                         <div className="flex items-start gap-3 max-w-[80%]">
                             <img
-                                src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
-                                alt="Sarah"
+                                src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg"
+                                alt="Usman Ali"
                                 className="w-8 h-8 rounded-full object-cover"
                             />
                             <div>
@@ -170,8 +170,8 @@ export function LandlordMessagesPage() {
                         {/* Received Message */}
                         <div className="flex items-start gap-3 max-w-[80%]">
                             <img
-                                src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
-                                alt="Sarah"
+                                src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg"
+                                alt="Usman Ali"
                                 className="w-8 h-8 rounded-full object-cover"
                             />
                             <div>

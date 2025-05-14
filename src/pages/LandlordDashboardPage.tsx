@@ -38,8 +38,8 @@ export function LandlordDashboardPage() {
   return (
     <DashboardLayout
       userType="landlord"
-      userName="Fatima Khan"
-      userAvatar="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
+      userName="Saad Khan"
+      userAvatar="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg"
     >
       {/* Overview Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">

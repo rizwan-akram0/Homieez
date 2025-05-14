@@ -118,17 +118,17 @@ export function AboutPage() {
                 image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
               },
               {
-                name: "Fatima Khan",
+                name: "Saad Khan",
                 role: "Head of Operations",
-                image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
+                image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
               },
               {
                 name: "Usman Ali",
-                role: "Tech Lead",
-                image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
+                role: "Marketing Director",
+                image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg",
               },
               {
-                name: "Sarah Ahmed",
+                name: "Faisal Mahmood",
                 role: "Marketing Director",
                 image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
               },
