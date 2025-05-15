@@ -291,8 +291,8 @@ export function MainLayout({ children }: MainLayoutProps) {
             <div>
               <h3 className="font-heading font-bold mb-4 text-neutral-900 dark:text-white">Contact Us</h3>
               <address className="not-italic text-sm text-neutral-600 dark:text-neutral-400 space-y-2">
-                <p>123 Main Street, F-7</p>
-                <p>Islamabad, Pakistan</p>
+                <p>586 - Airline Society</p>
+                <p>Lahore, Pakistan</p>
                 <p>Phone: +92 300 1234567</p>
                 <p>Email: info@homieez.com</p>
               </address>

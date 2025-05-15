@@ -71,7 +71,7 @@ export const properties: Property[] = [
     title: "Rana Boys Hostel",
     description:
       "Modern hostel with all facilities for students. Features spacious rooms, high-speed internet, and dedicated study areas.",
-    price: 25000,
+    price: 9300,
     location: {
       city: "Lahore",
       area: "PIA Society",
@@ -104,19 +104,14 @@ export const properties: Property[] = [
     title: "Luxury Apartment in DHA",
     description:
       "Elegant apartment with modern amenities, perfect for professionals or small families. Features a spacious balcony with city views.",
-    price: 85000,
+    price: 8200,
     location: {
       city: "Lahore",
       area: "DHA",
       address: "45-D, Phase 6, DHA",
       coordinates: { lat: 31.4798, lng: 74.4023 },
     },
-    images: [
-      "https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg",
-      "https://images.pexels.com/photos/1643385/pexels-photo-1643385.jpeg",
-      "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg",
-      "https://images.pexels.com/photos/1643386/pexels-photo-1643386.jpeg",
-    ],
+    images: [images.dove1, images.dove2, images.dove3, images.dove4],
     amenities: [
       "Fully Furnished",
       "Air Conditioning",
@@ -139,10 +134,10 @@ export const properties: Property[] = [
   },
   {
     id: "property-3",
-    title: "Student Studio in Gulberg",
+    title: "Al Rehman Boys Hostel",
     description:
-      "Cozy studio apartment ideal for students or young professionals. Located in the heart of Gulberg with easy access to universities.",
-    price: 35000,
+      "Al Rehman Boys Hostel ideal for students or young professionals. Located in the heart of Gulberg with easy access to universities.",
+    price: 5300,
     location: {
       city: "Lahore",
       area: "Gulberg",
@@ -150,10 +145,12 @@ export const properties: Property[] = [
       coordinates: { lat: 31.5104, lng: 74.3487 },
     },
     images: [
-      "https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg",
-      "https://images.pexels.com/photos/1669800/pexels-photo-1669800.jpeg",
-      "https://images.pexels.com/photos/1669798/pexels-photo-1669798.jpeg",
-      "https://images.pexels.com/photos/1669797/pexels-photo-1669797.jpeg",
+      images.alrehman1,
+      images.alrehman2,
+      images.alrehman3,
+      images.alrehman4,
+      images.alrehman5,
+      images.alrehman6,
     ],
     amenities: [
       "WiFi",
@@ -186,12 +183,7 @@ export const properties: Property[] = [
       address: "234 Model Town, Block C",
       coordinates: { lat: 31.4804, lng: 74.3287 },
     },
-    images: [
-      "https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg",
-      "https://images.pexels.com/photos/1454807/pexels-photo-1454807.jpeg",
-      "https://images.pexels.com/photos/1454805/pexels-photo-1454805.jpeg",
-      "https://images.pexels.com/photos/1454804/pexels-photo-1454804.jpeg",
-    ],
+    images: [images.stay1, images.stay2],
     amenities: ["WiFi", "Kitchen", "Washing Machine", "Study Area"],
     type: "room",
     size: 200,
@@ -211,7 +203,7 @@ export const properties: Property[] = [
     title: "Al-Hamad Boys Hostel",
     description:
       "Well-maintained hostel with dedicated staff. Offers comfortable rooms and a study-friendly environment.",
-    price: 20000,
+    price: 8500,
     location: {
       city: "Lahore",
       area: "Thokar Niaz Baig",
@@ -244,19 +236,14 @@ export const properties: Property[] = [
     title: "Executive Apartment G1-Market",
     description:
       "Premium apartment in a prime location. Features high-end finishes and modern amenities.",
-    price: 95000,
+    price: 9500,
     location: {
       city: "Lahore",
       area: "G1-Market",
       address: "12-A G1 Market",
       coordinates: { lat: 31.5004, lng: 74.3387 },
     },
-    images: [
-      "https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg",
-      "https://images.pexels.com/photos/2462016/pexels-photo-2462016.jpeg",
-      "https://images.pexels.com/photos/2462014/pexels-photo-2462014.jpeg",
-      "https://images.pexels.com/photos/2462013/pexels-photo-2462013.jpeg",
-    ],
+    images: [images.exec1, images.exec2, images.exec3],
     amenities: [
       "Fully Furnished",
       "Air Conditioning",
@@ -280,22 +267,17 @@ export const properties: Property[] = [
   },
   {
     id: "property-7",
-    title: "Budget Friendly House",
+    title: "Punjab Boys Hostel",
     description:
-      "Affordable family house in a peaceful neighborhood. Close to public transport and markets.",
-    price: 45000,
+      "Punjab Boys Hostel is ideal for students to stay, study and relax. Close to public transport and markets.",
+    price: 10000,
     location: {
       city: "Lahore",
       area: "Thokar Niaz Baig",
       address: "89 Main Road, Thokar Niaz Baig",
       coordinates: { lat: 31.4604, lng: 74.3987 },
     },
-    images: [
-      "https://images.pexels.com/photos/2121121/pexels-photo-2121121.jpeg",
-      "https://images.pexels.com/photos/2121120/pexels-photo-2121120.jpeg",
-      "https://images.pexels.com/photos/2121122/pexels-photo-2121122.jpeg",
-      "https://images.pexels.com/photos/2121123/pexels-photo-2121123.jpeg",
-    ],
+    images: [images.punjab1, images.punjab2, images.punjab3, images.punjab4],
     amenities: ["Kitchen", "Parking", "Water Filter", "Backup Power"],
     type: "house",
     size: 1800,
@@ -315,19 +297,14 @@ export const properties: Property[] = [
     title: "Modern Student Apartment",
     description:
       "Contemporary apartment designed for students. Features study areas and high-speed internet.",
-    price: 55000,
+    price: 12000,
     location: {
       city: "Lahore",
       area: "University Road",
       address: "45 University Road",
       coordinates: { lat: 31.5104, lng: 74.3487 },
     },
-    images: [
-      "https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg",
-      "https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg",
-      "https://images.pexels.com/photos/1571457/pexels-photo-1571457.jpeg",
-      "https://images.pexels.com/photos/1571456/pexels-photo-1571456.jpeg",
-    ],
+    images: [images.abrar1, images.abrar2, images.abrar3],
     amenities: [
       "WiFi",
       "Air Conditioning",
@@ -344,6 +321,39 @@ export const properties: Property[] = [
     landlordId: "user-5",
     landlord: users.find((u) => u.id === "user-5")!,
     nearbyUniversities: ["Punjab University", "FAST NUCES"],
+    availableFrom: new Date("2024-05-01").toISOString(),
+    createdAt: "",
+    updatedAt: "",
+  },
+  {
+    id: "property-9",
+    title: "Hafiz Hostel",
+    description:
+      "Contemporary hostel designed for students. Features study areas and high-speed internet.",
+    price: 9000,
+    location: {
+      city: "Lahore",
+      area: "Anarkali",
+      address: "Anarkali Market",
+      coordinates: { lat: 31.5104, lng: 74.3487 },
+    },
+    images: [images.abrar1, images.abrar2, images.abrar3],
+    amenities: [
+      "WiFi",
+      "Air Conditioning",
+      "Study Area",
+      "Security Guards",
+      "Fully Furnished",
+    ],
+    type: "hostel",
+    size: 900,
+    bedrooms: 2,
+    bathrooms: 1,
+    verified: true,
+    featuredUntil: new Date("2026-12-31").toISOString(),
+    landlordId: "user-5",
+    landlord: users.find((u) => u.id === "user-5")!,
+    nearbyUniversities: ["UET", "FAST NUCES"],
     availableFrom: new Date("2024-05-01").toISOString(),
     createdAt: "",
     updatedAt: "",

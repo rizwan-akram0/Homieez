@@ -113,24 +113,24 @@ export function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
               {
-                name: "Ali Hassan",
-                role: "CEO & Founder",
+                name: "Muhammad Saleh",
+                role: "Sales & Marketing",
                 image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
               },
               {
-                name: "Saad Khan",
-                role: "Head of Operations",
-                image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
+                name: "Nazia Iqbal",
+                role: "Customer Support",
+                image: "https://images.pexels.com/photos/28259518/pexels-photo-28259518.jpeg",
               },
               {
-                name: "Usman Ali",
-                role: "Marketing Director",
-                image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg",
-              },
-              {
-                name: "Faisal Mahmood",
-                role: "Marketing Director",
+                name: "Kaneez Fatima",
+                role: "Human Resource",
                 image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
+              },
+              {
+                name: "Muhammad Junaid",
+                role: "Quality assurance",
+                image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg",
               },
             ].map((member, index) => (
               <Card key={index}>
@@ -138,7 +138,7 @@ export function AboutPage() {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+                    className="w-14 h-14 rounded-full mx-auto mb-4 object-cover"
                   />
                   <h3 className="font-heading font-semibold">{member.name}</h3>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400">
@@ -158,7 +158,7 @@ export function AboutPage() {
               {
                 icon: <MapPin className="h-6 w-6" />,
                 title: "Visit Us",
-                content: "123 Main Street, F-7, Islamabad, Pakistan",
+                content: "586 - Airline Society, Lahore, Pakistan",
               },
               {
                 icon: <Phone className="h-6 w-6" />,
