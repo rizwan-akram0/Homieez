@@ -30,6 +30,7 @@ import { AdminAnalyticsPage } from "./pages/admin/AnalyticsPage";
 import Login from "./pages/Login";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { AuthProvider, useAuth } from "./contexts/AuthContext";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 // Import modals
 import { PropertyDetailsModal } from "./components/modals/PropertyDetailsModal";
@@ -57,6 +58,7 @@ function App() {
     <AuthProvider>
       <ThemeProvider>
         <Router>
+          <ScrollToTop />
           <Routes>
             {/* Public routes that don't require authentication */}
             <Route path="/login" element={<Login />} />
