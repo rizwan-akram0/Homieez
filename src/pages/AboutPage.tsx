@@ -21,12 +21,12 @@ export function AboutPage() {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {[
-            { label: "Active Users", value: "10,000+" },
-            { label: "Properties Listed", value: "5,000+" },
-            { label: "Cities Covered", value: "15+" },
-            { label: "Successful Bookings", value: "8,000+" },
+            { label: "Active Users", value: "100+" },
+            { label: "Properties Listed", value: "50+" },
+            // { label: "Cities Covered", value: "15+" },
+            { label: "Successful Bookings", value: "80+" },
           ].map((stat, index) => (
             <Card key={index}>
               <CardContent className="p-6 text-center">
@@ -52,7 +52,7 @@ export function AboutPage() {
             </div>
             <div>
               <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-6">
-                Founded in 2023, HomieeZ emerged from a simple observation: finding reliable
+                Founded in 2025, HomieeZ emerged from a simple observation: finding reliable
                 rental properties and trustworthy roommates in Pakistan was unnecessarily
                 complicated and often unsafe.
               </p>
