@@ -28,7 +28,7 @@ export function HomePage() {
     },
     {
       name: "Bilal Hassan",
-      avatar: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
+      avatar: "https://images.pexels.com/photos/220452/pexels-photo-220452.jpeg",
       role: "Landlord",
       text: "As a property owner, I love the verification system. It helps me find reliable tenants and the payment processing is seamless.",
       rating: 5,
